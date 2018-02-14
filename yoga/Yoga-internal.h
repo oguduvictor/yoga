@@ -223,10 +223,10 @@ struct YGConfig {
 };
 
 #define YG_UNDEFINED_VALUES \
-  { .value = YGUndefined, .unit = YGUnitUndefined }
+  { /* .value = */ YGUndefined, /* .unit = */ YGUnitUndefined }
 
 #define YG_AUTO_VALUES \
-  { .value = YGUndefined, .unit = YGUnitAuto }
+  { /* .value = */ YGUndefined, /* .unit = */ YGUnitAuto }
 
 #define YG_DEFAULT_EDGE_VALUES_UNIT                                            \
   {                                                                            \
@@ -254,21 +254,21 @@ static const float kDefaultFlexShrink = 0.0f;
 static const float kWebDefaultFlexShrink = 1.0f;
 
 static const YGStyle gYGNodeStyleDefaults = {
-    .direction = YGDirectionInherit,
-    .flexDirection = YGFlexDirectionColumn,
-    .justifyContent = YGJustifyFlexStart,
-    .alignContent = YGAlignFlexStart,
-    .alignItems = YGAlignStretch,
-    .alignSelf = YGAlignAuto,
-    .positionType = YGPositionTypeRelative,
-    .flexWrap = YGWrapNoWrap,
-    .overflow = YGOverflowVisible,
-    .display = YGDisplayFlex,
-    .flex = YGUndefined,
-    .flexGrow = YGUndefined,
-    .flexShrink = YGUndefined,
-    .flexBasis = YG_AUTO_VALUES,
-    .margin = {{YG_UNDEFINED_VALUES,
+    /* .direction = */ YGDirectionInherit,
+    /* .flexDirection = */ YGFlexDirectionColumn,
+    /* .justifyContent = */ YGJustifyFlexStart,
+    /* .alignContent = */ YGAlignFlexStart,
+    /* .alignItems = */ YGAlignStretch,
+    /* .alignSelf = */ YGAlignAuto,
+    /* .positionType = */ YGPositionTypeRelative,
+    /* .flexWrap = */ YGWrapNoWrap,
+    /* .overflow = */ YGOverflowVisible,
+    /* .display = */ YGDisplayFlex,
+    /* .flex = */ YGUndefined,
+    /* .flexGrow = */ YGUndefined,
+    /* .flexShrink = */ YGUndefined,
+    /* .flexBasis = */ YG_AUTO_VALUES,
+    /* .margin = */ {{YG_UNDEFINED_VALUES,
                 YG_UNDEFINED_VALUES,
                 YG_UNDEFINED_VALUES,
                 YG_UNDEFINED_VALUES,
@@ -277,7 +277,7 @@ static const YGStyle gYGNodeStyleDefaults = {
                 YG_UNDEFINED_VALUES,
                 YG_UNDEFINED_VALUES,
                 YG_UNDEFINED_VALUES}},
-    .position = {{YG_UNDEFINED_VALUES,
+    /* .position = */ {{YG_UNDEFINED_VALUES,
                   YG_UNDEFINED_VALUES,
                   YG_UNDEFINED_VALUES,
                   YG_UNDEFINED_VALUES,
@@ -286,7 +286,7 @@ static const YGStyle gYGNodeStyleDefaults = {
                   YG_UNDEFINED_VALUES,
                   YG_UNDEFINED_VALUES,
                   YG_UNDEFINED_VALUES}},
-    .padding = {{YG_UNDEFINED_VALUES,
+    /* .padding = */ {{YG_UNDEFINED_VALUES,
                  YG_UNDEFINED_VALUES,
                  YG_UNDEFINED_VALUES,
                  YG_UNDEFINED_VALUES,
@@ -295,7 +295,7 @@ static const YGStyle gYGNodeStyleDefaults = {
                  YG_UNDEFINED_VALUES,
                  YG_UNDEFINED_VALUES,
                  YG_UNDEFINED_VALUES}},
-    .border = {{YG_UNDEFINED_VALUES,
+    /* .border = */ {{YG_UNDEFINED_VALUES,
                 YG_UNDEFINED_VALUES,
                 YG_UNDEFINED_VALUES,
                 YG_UNDEFINED_VALUES,
@@ -304,38 +304,38 @@ static const YGStyle gYGNodeStyleDefaults = {
                 YG_UNDEFINED_VALUES,
                 YG_UNDEFINED_VALUES,
                 YG_UNDEFINED_VALUES}},
-    .dimensions = {{YG_AUTO_VALUES, YG_AUTO_VALUES}},
-    .minDimensions = {{YG_UNDEFINED_VALUES, YG_UNDEFINED_VALUES}},
-    .maxDimensions = {{YG_UNDEFINED_VALUES, YG_UNDEFINED_VALUES}},
-    .aspectRatio = YGUndefined,
+    /* .dimensions = */ {{YG_AUTO_VALUES, YG_AUTO_VALUES}},
+    /* .minDimensions = */ {{YG_UNDEFINED_VALUES, YG_UNDEFINED_VALUES}},
+    /* .maxDimensions = */ {{YG_UNDEFINED_VALUES, YG_UNDEFINED_VALUES}},
+    /* .aspectRatio = */ YGUndefined,
 };
 
 static const YGLayout gYGNodeLayoutDefaults = {
-    .position = {},
-    .dimensions = {{YGUndefined, YGUndefined}},
-    .margin = {},
-    .border = {},
-    .padding = {},
-    .direction = YGDirectionInherit,
-    .computedFlexBasisGeneration = 0,
-    .computedFlexBasis = YGUndefined,
-    .hadOverflow = false,
-    .generationCount = 0,
-    .lastParentDirection = (YGDirection)-1,
-    .nextCachedMeasurementsIndex = 0,
-    .cachedMeasurements = {},
-    .measuredDimensions = {{YGUndefined, YGUndefined}},
-    .cachedLayout =
+    /* .position = */ {},
+    /* .dimensions = */ {{YGUndefined, YGUndefined}},
+    /* .margin = */ {},
+    /* .border = */ {},
+    /* .padding = */ {},
+    /* .direction = */ YGDirectionInherit,
+    /* .computedFlexBasisGeneration = */ 0,
+    /* .computedFlexBasis = */ YGUndefined,
+    /* .hadOverflow = */ false,
+    /* .generationCount = */ 0,
+    /* .lastParentDirection = */ (YGDirection)-1,
+    /* .nextCachedMeasurementsIndex = */ 0,
+    /* .cachedMeasurements = */ {},
+    /* .measuredDimensions = */ {{YGUndefined, YGUndefined}},
+    /* .cachedLayout = */
         {
-            .availableWidth = 0,
-            .availableHeight = 0,
-            .widthMeasureMode = (YGMeasureMode)-1,
-            .heightMeasureMode = (YGMeasureMode)-1,
-            .computedWidth = -1,
-            .computedHeight = -1,
+            /* .availableWidth = */ 0,
+            /* .availableHeight = */ 0,
+            /* .widthMeasureMode = */ (YGMeasureMode)-1,
+            /* .heightMeasureMode = */ (YGMeasureMode)-1,
+            /* .computedWidth = */ -1,
+            /* .computedHeight = */ -1,
         },
-    .didUseLegacyFlag = false,
-    .doesLegacyStretchFlagAffectsLayout = false,
+    /* .didUseLegacyFlag = */ false,
+    /* .doesLegacyStretchFlagAffectsLayout = */ false,
 };
 
 extern bool YGFloatsEqual(const float a, const float b);
